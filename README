@@ -1,0 +1,9 @@
+Usage: unko filename
+
+  filename: input file name.
+
+filenameで指定したファイルの改行文字を除くすべての文字を「うんこ」に
+変換して標準出力に出力するためのコマンドです。
+
+「うんこ」はUTF-8で出力されます。
+
