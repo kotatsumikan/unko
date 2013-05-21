@@ -1,5 +1,17 @@
 #!/bin/sh
 
-cat $1 | \
+{
+FILENAME=`eval echo '$'{$#}`
+COMMAND='cat'
+while getopts "f" opt; do
+    case $opt in
+        f) COMMAND='tail -f'
+    esac
+done
+
+
+
+$COMMAND $FILENAME | \
 sed -e s/./うんこ/g
+}
 
