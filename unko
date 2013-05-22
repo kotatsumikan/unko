@@ -12,6 +12,6 @@ done
 
 
 $COMMAND $FILENAME | \
-sed -e s/./うんこ/g
+sed -e s/..\\?.\\?/うんこ/g
 }
 
