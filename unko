@@ -1,7 +1,14 @@
 #!/bin/sh
 
 {
-FILENAME=`eval echo '$'{$#}`
+
+if [ ${#} -eq 0 ]
+then 
+  FILENAME=''
+else 
+  FILENAME=`eval echo '$'{$#}`
+fi
+
 COMMAND='cat'
 while getopts "f" opt; do
     case $opt in
@@ -9,9 +16,7 @@ while getopts "f" opt; do
     esac
 done
 
-
-
 $COMMAND $FILENAME | \
 sed -e s/./うんこ/g
-}
 
+}
